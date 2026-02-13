@@ -24,7 +24,13 @@ html {
 	color: var(--body-font-color);
 	scroll-behavior: smooth;
 }
-
+.logo img {
+    /* Ajustes estándar para un logo de cabecera */
+    height: auto;          /* Mantiene la proporción */
+    max-height: 50px;      /* Altura ideal para que no rompa el menú */
+    width: auto;           /* Se ajusta según la altura */
+    display: block;        /* Elimina espacios en blanco extraños */
+}
 body {
 	overflow-x: hidden;
 }
@@ -386,7 +392,7 @@ header {
 
 /* The perfect blend */
 .perfect-blend {
-	background: url("images/perfect-blend.jpg") center no-repeat;
+	background: url("images/insumos.avif") center no-repeat;
 	background-size: cover;
 }
 
