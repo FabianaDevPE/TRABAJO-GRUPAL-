@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reservaciones | La Criolla</title>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="menu-styles.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<nav class="nav">
+<div class="menu-toggle">
+<i class="fas fa-bars"></i>
+<i class="fas fa-times"></i>
+</div>
+
+<a href="index.html" class="logo">
+<img src="images/logo.png">
+</a>
+
+<ul class="nav-list">
+<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+<li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+<li class="nav-item"><a href="reservas.html" class="nav-link active">Reservations</a></li>
+<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section class="menu-hero">
+<div class="container">
+<div class="global-headline">
+
+<h2 class="sub-headline">
+<span class="first-letter">R</span>eserva
+</h2>
+
+<h1 class="headline headline-light">Tu Mesa</h1>
+
+<div class="asterisk">
+<i class="fas fa-asterisk"></i>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="menu-content">
+<div class="container">
+
+<div class="category-header">
+<h2 class="sub-headline">
+<span class="first-letter">D</span>atos
+</h2>
+
+<div class="seperator">
+<div class="line line-left"></div>
+<div class="asterisk"><i class="fas fa-asterisk"></i></div>
+<div class="line line-right"></div>
+</div>
+</div>
+
+<form class="reservation-form">
+
+<input type="text" placeholder="Nombre" required>
+<input type="tel" placeholder="Teléfono" required>
+
+<input type="text" id="fecha" placeholder="Selecciona fecha" required>
+<input type="text" id="hora" placeholder="Selecciona hora" required>
+
+<input type="number" placeholder="Personas" min="1" max="20" required>
+
+<button class="btn cta-btn">Confirmar Reservación</button>
+
+</form>
+
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+<div class="back-to-top">
+<a href="#"><i class="fas fa-chevron-up"></i></a>
+</div>
+<p style="text-align:center;margin-top:20px;">
+© La Criolla - Restaurante Peruano
+</p>
+</div>
+</footer>
+
+
+<style>
+
+/* FORM */
+.reservation-form{
+max-width:500px;
+margin:40px auto;
+display:flex;
+flex-direction:column;
+gap:22px;
+animation:fadeIn 1s ease;
+}
+
+.reservation-form input{
+padding:14px 10px;
+font-size:16px;
+background:transparent;
+border:none;
+border-bottom:2px solid rgba(255,255,255,0.3);
+color:#fff;
+transition:.3s;
+}
+
+.reservation-form input:focus{
+outline:none;
+border-bottom:2px solid #c59d5f;
+}
+
+.reservation-form input::placeholder{
+color:rgba(255,255,255,0.6);
+}
+
+
+/* CALENDARIO PREMIUM */
+.flatpickr-calendar{
+background:#111;
+border:1px solid #c59d5f;
+box-shadow:0 10px 40px rgba(0,0,0,0.6);
+}
+
+.flatpickr-day{
+color:white;
+}
+
+.flatpickr-day.selected{
+background:#c59d5f;
+border:none;
+}
+
+.flatpickr-day:hover{
+background:#c59d5f55;
+}
+
+.flatpickr-months,
+.flatpickr-weekdays{
+background:#111;
+color:white;
+}
+
+.flatpickr-time input{
+color:white;
+background:#111;
+}
+
+
+/* ANIMACIÓN */
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script>
+flatpickr("#fecha",{
+dateFormat:"d/m/Y",
+minDate:"today"
+});
+
+flatpickr("#hora",{
+enableTime:true,
+noCalendar:true,
+dateFormat:"H:i",
+time_24hr:true
+});
+</script>
+
+<script src="main.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,91 @@
+/* CONTENEDOR FORM */
+.reservation-form{
+    max-width:500px;
+    margin:40px auto;
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+    animation:fadeIn 1s ease;
+}
+
+
+/* INPUTS GENERALES */
+.reservation-form input{
+    padding:14px 10px;
+    font-size:16px;
+    background:transparent;
+    border:none;
+    border-bottom:2px solid rgba(255,255,255,0.3);
+    color:#fff;
+    transition:.3s;
+}
+
+
+/* FOCUS INPUT */
+.reservation-form input:focus{
+    outline:none;
+    border-bottom:2px solid #c59d5f;
+}
+
+
+/* PLACEHOLDER */
+.reservation-form input::placeholder{
+    color:rgba(255,255,255,0.6);
+}
+
+
+/* DATE Y TIME TEXTO BLANCO */
+input[type="date"],
+input[type="time"]{
+    color:#fff !important;
+    -webkit-text-fill-color:#fff !important;
+}
+
+
+/* TEXTO INTERNO DATE */
+input[type="date"]::-webkit-datetime-edit,
+input[type="time"]::-webkit-datetime-edit{
+    color:#fff;
+}
+
+
+/* ICONOS CALENDARIO Y RELOJ */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator{
+    filter:invert(1);
+    cursor:pointer;
+}
+
+
+/* BOTÓN */
+.reservation-form button{
+    margin-top:20px;
+    padding:14px;
+    border:none;
+    background:#c59d5f;
+    color:#fff;
+    font-size:17px;
+    letter-spacing:1px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+
+/* HOVER BOTÓN */
+.reservation-form button:hover{
+    background:#a88345;
+    transform:scale(1.03);
+}
+
+
+/* ANIMACIÓN ENTRADA */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
