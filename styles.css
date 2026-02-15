@@ -14,8 +14,8 @@
 	--body-font: "Poppins", sans-serif;
 
 	--main-font-color-dark: #ffffff;
-	--secondary-font-color: #d4af37; /* dorado elegante */
-	--body-font-color: #de8f0f;
+	--secondary-font-color: #de8f0f; /* dorado elegante */
+	--body-font-color: #de0f0f;
 }
 
 html {
@@ -156,12 +156,13 @@ header {
 
 .nav-link {
 	display: block;
-	color: #e4c62d;
+	color: #ff0000;
 	text-transform: uppercase;
 	font-size: 1.6rem;
 	letter-spacing: 2px;
 	margin-right: -2px;
 	transition: color 0.5s;
+	font-weight: bold; 
 }
 
 .nav-link:hover {
