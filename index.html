@@ -38,15 +38,6 @@
 						<li class="nav-item">
 							<a href="reservas.html" class="nav-link">Reservations</a>
 						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link">News</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link">Shop</a>
-						</li>
-						<li class="nav-item">
-							<a href="#contact" class="nav-link">Contact</a>
-						</li>
 					</ul>
 				</nav>
 			</div>
@@ -217,5 +208,16 @@
 			</div>
 		</footer>
 		<script src="main.js"></script>
-	</body>
+		    <!-- BOT -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+    <df-messenger
+      intent="WELCOME"
+      chat-title="Chef"
+      agent-id="31a321fd-e7ba-4542-8960-ae8a6beda9ee"
+      language-code="es">
+    </df-messenger>
+
+</body>
 </html>
+
